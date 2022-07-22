@@ -6,7 +6,21 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jul 2022 12:33:30 +0800</lastBuildDate><atom:link href="http://akazss.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 Jul 2022 23:52:55 +0800</lastBuildDate><atom:link href="http://akazss.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis点评项目-短信登录</title>
+      <link>http://akazss.github.io/post/blog2/</link>
+      <pubDate>Fri, 22 Jul 2022 23:52:55 +0800</pubDate>
+      
+      <guid>http://akazss.github.io/post/blog2/</guid>
+      <description>用redis替换session
+reason1：多台tomcat之间的session有隔离问题，导致数据不能共享，基于对存储空间，存储速度，存储结构的多方面因素考虑，用redis。
+代替时考虑问题：
+选择合适的数据结构，一般简单Stirng，复杂Hash。 选择合适的key，保证唯一性与可用性。 选择合适的数据有效期。 选择合适的存储粒度，剔除敏感数据。
+关于ThreadLocal线程变量
+ThreadLocal中填充的变量属于当前线程，该变量对其他线程而言是隔离的，也就是说该变量是当前线程独有的变量。ThreadLocal为变量在每个线程中都创建了一个副本，那么每个线程可以访问自己内部的副本变量。 总的来说，ThreadLocal 适用于每个线程需要自己独立的实例且该实例需要在多个方法中被使用，也即变量在线程间隔离而在方法或类间共享的场景</description>
+    </item>
+    
     <item>
       <title>MavenConfig</title>
       <link>http://akazss.github.io/post/blog1/</link>

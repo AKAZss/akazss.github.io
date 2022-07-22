@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Redis点评项目-短信登录 // My New Hugo Site</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://akazss.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Redis点评项目-短信登录"/>
+<meta name="twitter:description" content="用redis替换session
+reason1：多台tomcat之间的session有隔离问题，导致数据不能共享，基于对存储空间，存储速度，存储结构的多方面因素考虑，用redis。
+代替时考虑问题：
+选择合适的数据结构，一般简单Stirng，复杂Hash。 选择合适的key，保证唯一性与可用性。 选择合适的数据有效期。 选择合适的存储粒度，剔除敏感数据。
+关于ThreadLocal线程变量
+ThreadLocal中填充的变量属于当前线程，该变量对其他线程而言是隔离的，也就是说该变量是当前线程独有的变量。ThreadLocal为变量在每个线程中都创建了一个副本，那么每个线程可以访问自己内部的副本变量。 总的来说，ThreadLocal 适用于每个线程需要自己独立的实例且该实例需要在多个方法中被使用，也即变量在线程间隔离而在方法或类间共享的场景"/>
+
+    <meta property="og:title" content="Redis点评项目-短信登录" />
+<meta property="og:description" content="用redis替换session
+reason1：多台tomcat之间的session有隔离问题，导致数据不能共享，基于对存储空间，存储速度，存储结构的多方面因素考虑，用redis。
+代替时考虑问题：
+选择合适的数据结构，一般简单Stirng，复杂Hash。 选择合适的key，保证唯一性与可用性。 选择合适的数据有效期。 选择合适的存储粒度，剔除敏感数据。
+关于ThreadLocal线程变量
+ThreadLocal中填充的变量属于当前线程，该变量对其他线程而言是隔离的，也就是说该变量是当前线程独有的变量。ThreadLocal为变量在每个线程中都创建了一个副本，那么每个线程可以访问自己内部的副本变量。 总的来说，ThreadLocal 适用于每个线程需要自己独立的实例且该实例需要在多个方法中被使用，也即变量在线程间隔离而在方法或类间共享的场景" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://akazss.github.io/post/blog2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-07-22T23:52:55+08:00" />
+<meta property="article:modified_time" content="2022-07-22T23:52:55+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="http://akazss.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Redis点评项目-短信登录</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 22, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>用redis替换session</p>
+<p>reason1：多台tomcat之间的session有隔离问题，导致数据不能共享，基于对存储空间，存储速度，存储结构的多方面因素考虑，用redis。</p>
+<p>代替时考虑问题：</p>
+<p>选择合适的数据结构，一般简单Stirng，复杂Hash。
+选择合适的key，保证唯一性与可用性。
+选择合适的数据有效期。
+选择合适的存储粒度，剔除敏感数据。</p>
+<p>关于ThreadLocal线程变量</p>
+<p>ThreadLocal中填充的变量属于当前线程，该变量对其他线程而言是隔离的，也就是说该变量是当前线程独有的变量。ThreadLocal为变量在每个线程中都创建了一个副本，那么每个线程可以访问自己内部的副本变量。
+总的来说，ThreadLocal 适用于每个线程需要自己独立的实例且该实例需要在多个方法中被使用，也即变量在线程间隔离而在方法或类间共享的场景</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
